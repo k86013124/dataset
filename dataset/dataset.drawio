@@ -1,0 +1,37 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 OPR/123.0.0.0" version="29.1.1">
+  <diagram id="dataset-er" name="Dataset ERD">
+    <mxGraphModel dx="1318" dy="719" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="dataset" parent="1" style="shape=rectangle;whiteSpace=wrap;rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Dataset&#xa;-----&#xa;sales_date : DATE&#xa;sku_id : VARCHAR(50)&#xa;dc_id : INT&#xa;sales_count : INT&#xa;weight : DECIMAL(10,2)&#xa;promo : BOOLEAN" vertex="1">
+          <mxGeometry height="180" width="220" x="420" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="sku" parent="1" style="shape=rectangle;whiteSpace=wrap;rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="SKU&#xa;-----&#xa;sku_id : VARCHAR(50)&#xa;name : TEXT&#xa;category : TEXT&#xa;weight : DECIMAL(10,2)&#xa;price : DECIMAL(10,2)" vertex="1">
+          <mxGeometry height="180" width="220" x="100" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="dc" parent="1" style="shape=rectangle;whiteSpace=wrap;rounded=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="DistributionCenters&#xa;-----&#xa;dc_id : INT&#xa;dc_name : TEXT&#xa;region : TEXT" vertex="1">
+          <mxGeometry height="160" width="220" x="750" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="calendar" parent="1" style="shape=rectangle;whiteSpace=wrap;rounded=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Calendar&#xa;-----&#xa;date : DATE&#xa;week : INT&#xa;month : INT&#xa;year : INT&#xa;is_holiday : BOOLEAN" vertex="1">
+          <mxGeometry height="180" width="220" x="420" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="promo" parent="1" style="shape=rectangle;whiteSpace=wrap;rounded=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Promo&#xa;-----&#xa;promo_id : INT&#xa;sku_id : VARCHAR(50)&#xa;date_start : DATE&#xa;date_end : DATE&#xa;promo_type : TEXT" vertex="1">
+          <mxGeometry height="180" width="240" x="90" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="rel1" edge="1" parent="1" source="dataset" style="endArrow=block;strokeColor=#000000;" target="sku">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel2" edge="1" parent="1" source="dataset" style="endArrow=block;strokeColor=#000000;" target="dc">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel3" edge="1" parent="1" source="dataset" style="endArrow=block;strokeColor=#000000;" target="calendar">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel4" edge="1" parent="1" source="promo" style="endArrow=block;strokeColor=#000000;" target="sku">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
